@@ -1,6 +1,6 @@
 {
   "name": "dune",
-  "version": "0.1.10",
+  "version": "0.1.12",
   "main": "./dist/index.js",
   "types": "./lib/index.d.ts",
   "module": "./lib-esm/index.js",
@@ -17,7 +17,7 @@
     "build:lib:es": "tsc -m es6 --outDir lib-esm",
     "build:dist": "webpack",
     "build": "yarn run clean && yarn run build:lib:umd && yarn run build:lib:es && yarn run build:dist",
-    "publish": "yarn build && yarn pack",
+    "pack": "yarn build && yarn version --patch && yarn pack",
     "dev": "tsc --watch",
     "ts:defs": "tsc --declaration --outDir './build' --emitDeclarationOnly",
     "test": "jest --watchAll",
