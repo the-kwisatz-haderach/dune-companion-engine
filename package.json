@@ -1,6 +1,6 @@
 {
   "name": "dune",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "main": "./dist/index.js",
   "types": "./lib/index.d.ts",
   "module": "./lib-esm/index.js",
@@ -21,7 +21,7 @@
     "dev": "tsc --watch",
     "ts:defs": "tsc --declaration --outDir './build' --emitDeclarationOnly",
     "test": "jest --watchAll",
-    "clean": "rm -rf lib lib-esm dist"
+    "clean": "rm -rf lib lib-esm dist && rm *.tgz"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
