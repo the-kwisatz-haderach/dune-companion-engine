@@ -1,9 +1,10 @@
 {
   "name": "dune",
-  "version": "0.1.14",
-  "main": "./dist/index.js",
-  "types": "./lib-esm/index.d.ts",
+  "version": "0.1.15",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "module": "./lib-esm/index.js",
+  "jsnext:main": "./lib-esm/index.js",
   "files": [
     "dist",
     "lib",
