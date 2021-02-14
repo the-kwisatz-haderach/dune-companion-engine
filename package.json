@@ -1,8 +1,8 @@
 {
   "name": "dune",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "main": "./dist/index.js",
-  "types": "./lib/index.d.ts",
+  "types": "./lib-esm/index.d.ts",
   "module": "./lib-esm/index.js",
   "files": [
     "dist",
