@@ -1,13 +1,14 @@
 import { createAction, PayloadActionCreator } from '@reduxjs/toolkit'
+import { PlayerActionPayload, PlayerActionType } from '../models/actions'
 import { AllianceRequest } from '../models/alliance'
 import { Factions } from '../models/faction'
 import { Conditions } from '../models/game'
-import { PlayerActionType, PlayerActionPayload } from './types'
 
 const createPlayerAction = <T = {}>(
   type: PlayerActionType
-): PayloadActionCreator<PlayerActionPayload<T>, PlayerActionType> =>
-  createAction<PlayerActionPayload<T>, PlayerActionType>(type)
+): PayloadActionCreator<PlayerActionPayload<T>, PlayerActionType> => {
+  return createAction<PlayerActionPayload<T>, PlayerActionType>(type)
+}
 
 export const createGame = createAction<{ gameId: string }>(
   PlayerActionType.CREATE_GAME
@@ -42,7 +43,7 @@ export const joinGame = createPlayerAction<{
 
 export const leaveGame = createPlayerAction(PlayerActionType.LEAVE_GAME)
 
-const playerActions = {
+export const playerActions = {
   [PlayerActionType.SET_PLAYER_ORDER]: setPlayerOrder,
   [PlayerActionType.SELECT_FACTION]: selectFaction,
   [PlayerActionType.SET_CONDITIONS]: setConditions,
@@ -55,5 +56,3 @@ const playerActions = {
 }
 
 export type PlayerAction = typeof playerActions[keyof typeof playerActions]
-
-export default playerActions

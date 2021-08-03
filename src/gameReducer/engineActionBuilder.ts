@@ -1,7 +1,7 @@
 import { ActionReducerMapBuilder } from '@reduxjs/toolkit'
-import { Game } from '../models/game'
 import { engineActions } from '../actions'
-import phases from '../library/phases'
+import { phases } from '../library/constants/phases'
+import { Game } from '../models/game'
 
 const engineActionBuilder = (builder: ActionReducerMapBuilder<Game>) =>
   builder

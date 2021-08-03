@@ -1,7 +1,7 @@
-import { Cities } from '../models/city'
-import { Factions, Faction } from '../models/faction'
+import { Cities } from '../../models/city'
+import { Factions, Faction } from '../../models/faction'
 
-const factions: Record<Factions, Faction> = {
+export const factions: Record<Factions, Faction> = {
   BENE_GESSERIT: {
     name: 'Bene Gesserit',
     shorthand: 'BNG',
@@ -76,5 +76,3 @@ const factions: Record<Factions, Faction> = {
     startingCity: null
   }
 }
-
-export default factions

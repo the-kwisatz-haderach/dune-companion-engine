@@ -1,4 +1,2 @@
-import playerActions from './playerActions'
-import engineActions from './engineActions'
-
-export { playerActions, engineActions }
+export * from './playerActions'
+export * from './engineActions'

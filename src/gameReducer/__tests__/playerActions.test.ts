@@ -1,8 +1,8 @@
 import { playerActions } from '../../actions'
-import gameReducer from '../'
-import factions from '../../library/factions'
+import { gameReducer } from '../'
+import { factions } from '../../library/constants/factions'
 import { Factions } from '../../models/faction'
-import { initialGameState } from '../../models/game'
+import { initialGameState } from '../../library/constants'
 import { playerFixture } from './__fixtures__'
 
 describe('playerActions', () => {
@@ -11,7 +11,6 @@ describe('playerActions', () => {
       gameReducer(
         initialGameState,
         playerActions.SET_CONDITIONS({
-          gameId: 'test',
           playerId: 'test',
           maxPlayers: 4,
           maxTurns: 5,
@@ -35,7 +34,6 @@ describe('playerActions', () => {
           allianceRequests: []
         },
         playerActions.REQUEST_ALLIANCE({
-          gameId: 'test',
           playerId: 'test',
           requester: 'atreides',
           responder: 'fremen'
@@ -54,7 +52,6 @@ describe('playerActions', () => {
           playerOrder: ['three', 'two', 'one']
         },
         playerActions.SET_PLAYER_ORDER({
-          gameId: 'test',
           playerId: 'test',
           playerOrder: ['one', 'two', 'three']
         })
@@ -77,7 +74,6 @@ describe('playerActions', () => {
           }
         },
         playerActions.SELECT_FACTION({
-          gameId: 'test',
           playerId: 'test',
           faction: Factions.EMPEROR
         })
@@ -136,7 +132,7 @@ describe('playerActions', () => {
           alliances: [{ players: ['test', 'other', 'third'] }],
           playerOrder: ['test', 'other', 'third']
         },
-        playerActions.LEAVE_GAME({ playerId: 'test', gameId: 'test' })
+        playerActions.LEAVE_GAME({ playerId: 'test' })
       )
     ).toEqual({
       ...initialGameState,

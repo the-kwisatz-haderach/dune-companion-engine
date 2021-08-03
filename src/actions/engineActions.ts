@@ -1,6 +1,6 @@
 import { createAction } from '@reduxjs/toolkit'
+import { EngineActionType } from '../models/actions'
 import { Game } from '../models/game'
-import { EngineActionType } from './types'
 
 export const incrementTurn = createAction(EngineActionType.INCREMENT_TURN)
 
@@ -10,10 +10,8 @@ export const updateGame = createAction<{ game: Game }>(
   EngineActionType.UPDATE_GAME
 )
 
-const engineActions = {
+export const engineActions = {
   [EngineActionType.INCREMENT_PHASE]: incrementPhase,
   [EngineActionType.INCREMENT_TURN]: incrementTurn,
   [EngineActionType.UPDATE_GAME]: updateGame
 }
-
-export default engineActions

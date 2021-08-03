@@ -1,8 +1,7 @@
-import { playerActions } from '.'
+import { PlayerActionType } from '../models/actions'
 import { Game } from '../models/game'
 import { Phases } from '../models/phase'
 import { Player } from '../models/player'
-import { PlayerActionType } from './types'
 
 export default function getPlayerActions(
   player: Player,

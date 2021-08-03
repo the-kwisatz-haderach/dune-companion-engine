@@ -1,6 +1,6 @@
-import { Cities, City } from '../models/city'
+import { Cities, City } from '../../models/city'
 
-const cities: Record<Cities, City> = {
+export const cities: Record<Cities, City> = {
   ARRAKEEN: {
     name: 'Arrakeen',
     description: '',
@@ -17,5 +17,3 @@ const cities: Record<Cities, City> = {
     specialRules: []
   }
 }
-
-export default cities

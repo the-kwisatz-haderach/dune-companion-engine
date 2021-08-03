@@ -1,6 +1,6 @@
 import { AnyAction } from '@reduxjs/toolkit'
-import { playerActions } from '../../actions'
-import { PlayerActionType } from '../../actions/types'
+import playerActions from '../../actions/playerActions'
+import { PlayerActionType } from '../../models/actions'
 
 export type PlayerAction = ReturnType<
   typeof playerActions[keyof typeof playerActions]

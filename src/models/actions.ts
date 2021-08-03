@@ -1,5 +1,4 @@
-import { Game } from '../models/game'
-import { Player } from '../models/player'
+import { Player } from './player'
 
 export enum EngineActionType {
   INCREMENT_TURN = 'INCREMENT_TURN',
@@ -22,5 +21,4 @@ export enum PlayerActionType {
 
 export type PlayerActionPayload<T = {}> = T & {
   playerId: Player['id']
-  gameId: Game['id']
 }

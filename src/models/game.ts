@@ -2,8 +2,8 @@ import { Player } from './player'
 import { Auction } from './auction'
 import { Alliance, AllianceRequest } from './alliance'
 import { Notification } from './notification'
-import phases from '../library/phases'
-import { PlayerActionType } from '../actions/types'
+import { phases } from '../library/constants/phases'
+import { PlayerActionType } from './actions'
 
 export type Conditions = {
   advancedMode: boolean
@@ -28,32 +28,4 @@ export type Game = {
   notifications: Notification[]
   allianceRequests: AllianceRequest[]
   alliances: Alliance[]
-}
-
-export const initialGameState: Game = {
-  id: '',
-  players: {},
-  playerOrder: [],
-  awaitingAction: [],
-  conditions: {
-    advancedMode: false,
-    maxPlayers: 6,
-    maxTurns: 10
-  },
-  actions: {},
-  currentTurn: 0,
-  currentFirstPlayer: 0,
-  currentPhase: 0,
-  auctions: [],
-  allianceRequests: [],
-  alliances: [],
-  notifications: [],
-  phases
-}
-
-export default function createGame(id: string): Game {
-  return {
-    ...initialGameState,
-    id
-  }
 }

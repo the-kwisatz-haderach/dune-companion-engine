@@ -22,22 +22,3 @@ export type AuctionBid = {
   bidder: string
   amount: number
 }
-
-export function createAuctionRound(initialBidderId: string): AuctionRound {
-  return {
-    currentBidder: initialBidderId,
-    passingOnBidding: [],
-    bids: []
-  }
-}
-
-export default function createAuction(playerIds: string[]): Auction {
-  return {
-    awaitingConfirmation: playerIds,
-    currentRound: 0,
-    participants: [],
-    rounds: [],
-    results: [],
-    isDone: false
-  }
-}

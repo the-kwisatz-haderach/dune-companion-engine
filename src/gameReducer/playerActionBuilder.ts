@@ -1,9 +1,9 @@
 import { ActionReducerMapBuilder } from '@reduxjs/toolkit'
 import { omit, pull } from 'lodash'
 import { playerActions } from '../actions'
-import factions from '../library/factions'
+import { factions } from '../library/constants/factions'
+import { createPlayer } from '../library/factories'
 import { Game } from '../models/game'
-import createPlayer from '../models/player'
 
 export default function playerActionBuilder(
   builder: ActionReducerMapBuilder<Game>

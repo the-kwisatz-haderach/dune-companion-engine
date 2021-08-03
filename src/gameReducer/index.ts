@@ -1,11 +1,9 @@
 import { createReducer, compose } from '@reduxjs/toolkit'
-import { initialGameState } from '../models/game'
 import playerActionBuilder from './playerActionBuilder'
 import engineActionBuilder from './engineActionBuilder'
+import { initialGameState } from '../library/constants/initialGameState'
 
-const gameReducer = createReducer(
+export const gameReducer = createReducer(
   initialGameState,
   compose(engineActionBuilder, playerActionBuilder)
 )
-
-export default gameReducer

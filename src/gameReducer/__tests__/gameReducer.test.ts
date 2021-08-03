@@ -1,5 +1,5 @@
-import gameReducer from '..'
-import { initialGameState } from '../../models/game'
+import { gameReducer } from '..'
+import { initialGameState } from '../../library/constants'
 
 describe('gameReducer', () => {
   test('invalid action', () => {

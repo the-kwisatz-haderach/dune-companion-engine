@@ -1,7 +1,7 @@
 import { engineActions } from '../../actions'
-import gameReducer from '../'
-import phases from '../../library/phases'
-import { initialGameState } from '../../models/game'
+import { gameReducer } from '../'
+import { phases } from '../../library/constants'
+import { initialGameState } from '../../library/constants/initialGameState'
 
 describe('engineActions', () => {
   test('incrementPhase', () => {

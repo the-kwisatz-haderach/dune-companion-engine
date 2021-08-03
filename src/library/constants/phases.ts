@@ -1,6 +1,6 @@
-import { Phase, Phases } from '../models/phase'
+import { Phase, Phases } from '../../models/phase'
 
-const phases: Record<Phases, Phase> = {
+export const phases: Record<Phases, Phase> = {
   [Phases.STORM]: {
     name: 'Storm',
     description: ''
@@ -38,5 +38,3 @@ const phases: Record<Phases, Phase> = {
     description: ''
   }
 }
-
-export default phases
