@@ -1,10 +1,10 @@
 {
   "name": "dune",
-  "version": "0.1.15",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
-  "module": "./lib-esm/index.js",
-  "jsnext:main": "./lib-esm/index.js",
+  "version": "0.1.16",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "module": "lib-esm/index.js",
+  "jsnext:main": "lib-esm/index.js",
   "files": [
     "dist",
     "lib",
@@ -22,7 +22,7 @@
     "dev": "tsc --watch",
     "ts:defs": "tsc --declaration --outDir './build' --emitDeclarationOnly",
     "test": "jest --watchAll",
-    "clean": "rm -rf lib lib-esm dist && rm *.tgz"
+    "clean": "rm -rf lib lib-esm dist || rm *.tgz"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
